@@ -1,7 +1,6 @@
 package com.aziz.noteapprxjava.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +11,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aziz.noteapprxjava.R;
+import com.aziz.noteapprxjava.database.NewsEntity;
 import com.aziz.noteapprxjava.model.News;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class SavedAdapter extends RecyclerView.Adapter<SavedAdapter.MyViewHolder> {
 
-    private List<News.Article> newsList;
+    private List<NewsEntity> newsList;
     private Context context;
     private static ClickListener clickListener;
 
-    public RecyclerViewAdapter(Context context, List<News.Article> newsList, ClickListener listener) {
+    public SavedAdapter(Context context, List<NewsEntity> newsList, ClickListener listener) {
         this.newsList = newsList;
         this.context = context;
         clickListener = listener;
@@ -69,10 +69,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        News.Article news = newsList.get(position);
+        NewsEntity news = newsList.get(position);
         holder.title.setText(news.getTitle());
         holder.description.setText(news.getDescription());
-        holder.author.setText(news.getSource().getName());
+        holder.author.setText(news.getName());
         holder.date.setText(news.getPublishedAt().substring(0, news.getPublishedAt().indexOf("T")));
 
         Glide.with(context).load(news.getUrlToImage()).placeholder(R.drawable.load).centerCrop().into(holder.image);

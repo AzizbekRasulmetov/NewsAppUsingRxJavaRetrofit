@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:columnCount="2"
+    android:padding="20dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/sport_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Sport"
+        app:chipIcon="@drawable/ic_baseline_sports_kabaddi_24" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/business_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Business"
+        app:chipIcon="@drawable/ic_baseline_business_center_24" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/health_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Health"
+        app:chipIcon="@drawable/ic_baseline_local_hospital_24" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tech_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Technology"
+        app:chipIcon="@drawable/ic_baseline_laptop_24" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/science_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Science"
+        android:layout_marginEnd="10dp"
+        app:chipIcon="@drawable/ic_baseline_extension_24" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/entertainment_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entertainment"
+        android:layout_marginEnd="10dp"/>
+
+
+</GridLayout>
